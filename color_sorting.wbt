@@ -1,0 +1,140 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/conveyors/protos/ConveyorBelt.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/PlasticCrate.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/universal_robots/protos/UR5e.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/devices/robotiq/protos/Robotiq3fGripper.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.04873064894550787 0.0013404307632712844 0.998811056756341 3.1965272946157914
+  position 3.347762766327254 1.0083184874215851 0.5961187712812914
+}
+PlasticCrate {
+  translation 0 0.64 0
+  name "plastic crate(1)"
+  size 0.5 0.5 0.5
+}
+PlasticCrate {
+  translation 0 0.11 0
+  size 0.5 0.5 0.5
+}
+ConveyorBelt {
+  translation 0 2 0
+  size 30 0.5 0.6
+}
+PlasticCrate {
+  translation 0 1.46 0
+  name "plastic crate(2)"
+  size 0.5 0.5 0.5
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+UR5e {
+  translation -1.52253e-06 1.14 0.61
+  rotation -1.7296499999873723e-06 -3.4073799999751236e-06 0.9999999999926992 1.5708
+  controller "color_sort_controller"
+  toolSlot [
+    DistanceSensor {
+    }
+    Camera {
+      rotation 0 0 1 1.57
+      recognition Recognition {
+      }
+    }
+    Robotiq3fGripper {
+      rotation 0 1 0 -3.14
+    }
+  ]
+}
+Solid {
+  translation -3 2 0.649525
+  rotation -5.784962505122848e-12 -0.9999999999999999 -2.595134308723653e-11 1.3861480340099749e-05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.904295 0.243366 0.14963
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "red"
+  boundingObject Box {
+    size 0.1 0.1 0.1
+  }
+  physics Physics {
+    mass 1
+  }
+  recognitionColors [
+    0.455085 0.977539 0.312001
+  ]
+}
+Solid {
+  translation -6 2 0.649486
+  rotation -2.2987936984541905e-11 -1 -7.261916584603071e-12 1.3861472087957263e-05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.0378424 0.0383307 0.904295
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "blue"
+  boundingObject Box {
+    size 0.1 0.1 0.1
+  }
+  physics Physics {
+    mass 1
+  }
+  recognitionColors [
+    0.455085 0.977539 0.312001
+  ]
+}
+Solid {
+  translation -13 2 0.649446
+  rotation 1.145692073628827e-11 -0.9999999999999999 -4.5189229965015854e-12 1.3861463835678272e-05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.398413 0.85156 0.270146
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "green"
+  boundingObject Box {
+    size 0.1 0.1 0.1
+  }
+  physics Physics {
+    mass 1
+  }
+  recognitionColors [
+    0.455085 0.977539 0.312001
+  ]
+}
+Solid {
+  translation -0.2 1.05 0.3
+  children [
+    Shape {
+      geometry Box {
+        size 1 0.3 0.62
+      }
+    }
+  ]
+  name "solid(1)"
+  recognitionColors [
+    0.0715648 0.0574807 0.0439307
+  ]
+}
