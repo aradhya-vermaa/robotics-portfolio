@@ -23,7 +23,7 @@ Autonomous surface vessel (ASV) platform capable of multi-robot self-assembly, r
 ### Relative Pose Tracking & Docking Capture Sector
 | Dynamic Docking & AprilTag Tracking | Docking Acceptance Envelope (MATLAB) |
 | :---: | :---: |
-| ![AprilTag Tracking](test_19.mp4) | ![Scatter Plot](Scatterplot.png) |
+| <video src="test_19.mp4" controls="controls" muted="muted" width="100%"></video> | ![Scatter Plot](Scatterplot.png) |
 
 * **Real-Time Relative Perception:** Integrated an OpenCV and AprilTag pipeline to estimate continuous inter-robot distance and relative angular heading during docking runs.
 * **Empirical Validation:** Processed experimental docking trial coordinates in MATLAB to determine the empirical magnetic capture envelope (86° acceptance sector, 15.23 cm capture radius).
@@ -54,18 +54,10 @@ Underwater Remotely Operated Vehicle (ROV) configured for subsea maneuverability
 Autonomous color-based sorting pipeline utilizing a 6-DOF UR5e robotic manipulator and wrist-mounted RGB camera in Webots.
 
 ### Simulation Demo
-![UR5e Manipulation Demo](capstone.MOV)
+<video src="capstone.MOV" controls="controls" muted="muted" width="100%"></video>
 
 * **Vision-Based Grasping:** Implemented color segmentation and centroid detection via a wrist-mounted RGB camera stream to calculate 3D object coordinates and trigger real-time grasp routines.
 * **Kinematics & Trajectory Control:** Derived and implemented forward/inverse kinematics (FK/IK) and Jacobian-based path planning to execute smooth multi-axis pick-and-place trajectories.
 * **Closed-Loop Automation:** Evaluated task reliability and fault-recovery behavior across repeated automated sorting cycles.
 * **Project Artifacts:** [arm_ik.py](./arm_ik.py) | [color_sort_controller.py](./color_sort_controller.py) | [kinematic_helpers.py](./kinematic_helpers.py) | [color_sorting.wbt](./color_sorting.wbt)
 ```[cite: 1, 2, 5, 6, 7, 20]
-
----
-
-### Final Check Before Sending:
-1. Click **Commit changes...** on GitHub[cite: 10].
-2. Scroll through the page to make sure `micro_asv.png`, `micro_asv2.png`, and `BluROV.png` load[cite: 20].
-3. Copy your GitHub repository URL (`[https://github.com/aradhya-vermaa/robotics-portfolio](https://github.com/aradhya-vermaa/robotics-portfolio)`) and paste it into the Tesla email draft[cite: 7, 10].
-4. Attach your PDF resume and send the email[cite: 6, 7].
