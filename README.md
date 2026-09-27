@@ -1,6 +1,6 @@
 # Robotics Engineering Portfolio
 **Aradhya Verma** | University of Wisconsin–Madison  
-[Email](mailto:verma48@wisc.edu) • [LinkedIn](https://linkedin.com)
++1 (608)-217-8658 • [verma48@wisc.edu](mailto:verma48@wisc.edu)
 
 Autonomous systems, marine robotics hardware, and robotic manipulation portfolio featuring rapid prototyping, subsea avionics integration, computer vision perception, and closed-loop kinematic control.
 
@@ -11,23 +11,12 @@ Autonomous systems, marine robotics hardware, and robotic manipulation portfolio
 
 Autonomous surface vessel (ASV) swarm research platform designed for multi-agent self-assembly, relative pose tracking, and passive magnetic docking.
 
-### Relative Pose Tracking & Autonomous Docking Demo
-![ASV Latching Test](asvlatchingtest.gif)
-
-* **Full-Stack Hardware Bring-Up:** Rapid-prototyped and built 5 autonomous marine vessels from scratch, fabricating 3D-printed chassis parts, integrating Li-ion power, and bringing up low-level motor drive electronics.
-* **Empirical Propulsion Profiling:** Built a test rig using force-load instrumentation to characterize dynamic thrust outputs across all vector axes, identifying motor deadbands and non-linearities to inform closed-loop control.
-* **Perception & Latching Envelope Mapping:** Deployed an OpenCV/AprilTag optical tracking pipeline to track multi-boat interaction dynamics, analyzing experimental data in MATLAB to discover the 86° / 15.2 cm capture boundary for zero-power magnetic docking.
-
-### Hardware Fabrication & Docking Acceptance Characterization
-<p align="center">
-  <img src="micro_asv.png" width="48%" />
-  <img src="Scatterplot.png" width="48%" />
-</p>
-
-* **Perception Pipeline:** [`latching_area.py`](./latching_area.py)
-* **Analysis & Visualization Script:** [`Scatterplot.m`](./Scatterplot.m)
-* **Empirical Trial Dataset:** [`experiment_data.csv`](./experiment_data.csv)
-* **Additional Hull Views:** [`micro_asv2.png`](./micro_asv2.png)
+| Visual | System Architecture & Engineering Rigor |
+| :---: | :--- |
+| <img src="micro_asv.png" width="380" /> | **Full-Stack Hardware Fabrication**<br>• Rapid-prototyped and fabricated 5 autonomous marine vessels from scratch.<br>• 3D-printed custom modular hull enclosures, motor brackets, and stabilizing fins.<br>• Packaged internal lithium-ion battery units, power distribution, and microcontroller avionics. |
+| <img src="micro_asv2.png" width="380" /> | **Actuation, Latching & Thrust Profiling**<br>• Integrated a central motorized magnetic latching mechanism for zero-power rigid docking.<br>• Instrumented directional thrusters with force sensors to profile static and dynamic thrust.<br>• Identified motor deadbands and actuation non-linearities across all planar vector axes. |
+| <img src="asvlatchingtest.gif" width="380" /> | **Optical Tracking & Docking Kinematics**<br>• Developed an overhead OpenCV pipeline using AprilTag markers on approaching vessels.<br>• Tracked real-time relative distance, coordinate displacement, and angular bearing.<br>• Extracted continuous docking kinematics to isolate entry conditions for passive latching. |
+| <img src="Scatterplot.png" width="380" /> | **Capture Envelope Modeling (MATLAB)**<br>• Analyzed multi-trial experimental tracking runs to define the passive capture boundary.<br>• Mapped the valid zero-thrust latching sector to an 86° angle and 15.2 cm radius.<br>• Scripts & Data: [`Scatterplot.m`](./Scatterplot.m) • [`latching_area.py`](./latching_area.py) • [`experiment_data.csv`](./experiment_data.csv) |
 
 ---
 
@@ -63,12 +52,3 @@ Autonomous color-based sorting pipeline utilizing a 6-DOF UR5e robotic manipulat
 * **Kinematics Helper Functions:** [`kinematic_helpers.py`](./kinematic_helpers.py)
 * **Sorting Controllers:** [`color_sort_controller.py`](./color_sort_controller.py) | [`color_sort_controller.c`](./color_sort_controller.c)
 * **Webots Simulation World:** [`color_sorting.wbt`](./color_sorting.wbt)
-```[cite: 1, 2, 5, 6, 7, 13]
-
----
-
-### How to apply this right now:
-1. Click on **`README.md`** in your repository file list[cite: 13].
-2. Click the **pencil icon** (Edit this file).
-3. Select all the existing text, hit delete, and paste this block into the file.
-4. Scroll down and click the green **Commit changes...** button[cite: 12].
