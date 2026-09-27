@@ -1,96 +1,74 @@
 # Robotics Engineering Portfolio
 **Aradhya Verma** | University of Wisconsin–Madison  
-[verma48@wisc.edu](mailto:verma48@wisc.edu) | +1 (608)-217-8658
+[Email](mailto:verma48@wisc.edu) • [LinkedIn](https://linkedin.com)
 
-Autonomous systems, subsea avionics, and closed-loop manipulation portfolio.
-
----
-
-## 1. FloatForm: Modular Self-Reconfiguring Robotic Boats
-*Marine Robotics Laboratory | Research under Prof. Wei Wang*
-
-Autonomous surface vessel (ASV) platform capable of multi-robot self-assembly, relative pose tracking, and autonomous docking maneuvers.
-
-<table>
-  <!-- Row 1: Picture 1 Left, Text Right -->
-  <tr>
-    <td width="48%">
-      <img src="micro_asv.png" alt="FloatForm Fleet Assembly" width="100%">
-    </td>
-    <td width="52%">
-      <h4>Modular Fleet Fabrication</h4>
-      <ul>
-        <li>Fabricated and assembled 5 autonomous surface vessel (ASV) units using 3D-printed resin hulls, laser-cut acrylic top plates, cross-fin stabilizers, and custom 4-thruster omnidirectional vector arrays.</li>
-        <li>Wired and integrated onboard microcontrollers, power distribution, and motor drivers across all 5 units.</li>
-      </ul>
-    </td>
-  </tr>
-
-  <!-- Row 2: Text Left, Picture 2 Right -->
-  <tr>
-    <td width="52%">
-      <h4>Auxetic Latching & Thrust Benchmarking</h4>
-      <ul>
-        <li>Built and bench-tested an origami-inspired auxetic permanent magnet latching mechanism driven by a central servo and 3D-printed gearbox to maintain zero-power rigid connection across adjacent modules.</li>
-        <li>Conducted benchtop force sensor testing on miniature thrusters to evaluate dynamic response profiles, hydrodynamic deadbands, and rotational inertia compensation.</li>
-      </ul>
-    </td>
-    <td width="48%">
-      <img src="micro_asv2.png" alt="Hull and Fin Architecture" width="100%">
-    </td>
-  </tr>
-
-  <!-- Row 3: Graph Left, Text + Video Link Right -->
-  <tr>
-    <td width="48%">
-      <img src="Scatterplot.png" alt="MATLAB Docking Capture Sector" width="100%">
-    </td>
-    <td width="52%">
-      <h4>Perception Tracking & Empirical Capture Envelope</h4>
-      <ul>
-        <li>Integrated an OpenCV and AprilTag pipeline to estimate continuous inter-robot distance and relative angular heading during docking runs.</li>
-        <li><b>Docking Verification Video:</b> <a href="test_19.mp4">▶ Click here to view in-water AprilTag docking video (test_19.mp4)</a></li>
-        <li>Processed experimental docking trial coordinates in MATLAB to determine the empirical magnetic capture envelope (86° acceptance sector, 15.23 cm capture radius).</li>
-        <li><b>Code & Data:</b> <a href="Scatterplot.m">Scatterplot.m</a> | <a href="latching_area.py">latching_area.py</a> | <a href="experiment_data.csv">experiment_data.csv</a></li>
-        <li><b>Publication:</b> <em>Nature Communications</em> (2026) <a href="https://doi.org/10.1038/s41467-026-74527-6">doi:10.1038/s41467-026-74527-6</a></li>
-      </ul>
-    </td>
-  </tr>
-</table>
+Autonomous systems, marine robotics hardware, and robotic manipulation portfolio featuring rapid prototyping, subsea avionics integration, computer vision perception, and closed-loop kinematic control.
 
 ---
 
-## 2. BlueROV Subsea Platform & Custom Payload Integration
-*Marine Robotics Laboratory*
+## 1. FloatForm: Modular Swarm Robotic Boats
+*Marine Robotics Laboratory | June – July 2026*
 
-Underwater Remotely Operated Vehicle (ROV) configured for subsea maneuverability and auxiliary payload integration.
+Autonomous surface vessel (ASV) swarm research platform designed for multi-agent self-assembly, relative pose tracking, and passive magnetic docking.
 
-<table>
-  <tr>
-    <td width="50%">
-      <img src="BluROV.png" alt="BlueROV Packaging & Assembly" width="100%">
-    </td>
-    <td width="50%">
-      <h4>Chassis Packaging & Subsea Avionics</h4>
-      <ul>
-        <li><b>CAD & Chassis Design:</b> Modeled a custom internal mounting chassis in CAD to position and secure internal avionics, motor ESCs, terminal breakout blocks, and an onboard camera within a cylindrical acrylic pressure hull.</li>
-        <li><b>Avionics Integration:</b> Built internal power and signal harnesses connecting an onboard Navigator/Arduino flight controller, high-current lithium power distribution, and tethered Ethernet for live telemetry.</li>
-        <li><b>Hull Sealing & Dynamic Testing:</b> Assembled pressure enclosure using radial O-rings and sealed penetrators; calibrated thruster deadbands and executed in-tank dynamic testing via game controller to evaluate trim, buoyancy, and watertight sealing integrity.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+### Relative Pose Tracking & Autonomous Docking Demo
+![ASV Latching Test](asvlatchingtest.gif)
+
+* **Full-Stack Hardware Bring-Up:** Rapid-prototyped and built 5 autonomous marine vessels from scratch, fabricating 3D-printed chassis parts, integrating Li-ion power, and bringing up low-level motor drive electronics.
+* **Empirical Propulsion Profiling:** Built a test rig using force-load instrumentation to characterize dynamic thrust outputs across all vector axes, identifying motor deadbands and non-linearities to inform closed-loop control.
+* **Perception & Latching Envelope Mapping:** Deployed an OpenCV/AprilTag optical tracking pipeline to track multi-boat interaction dynamics, analyzing experimental data in MATLAB to discover the 86° / 15.2 cm capture boundary for zero-power magnetic docking.
+
+### Hardware Fabrication & Docking Acceptance Characterization
+<p align="center">
+  <img src="micro_asv.png" width="48%" />
+  <img src="Scatterplot.png" width="48%" />
+</p>
+
+* **Perception Pipeline:** [`latching_area.py`](./latching_area.py)
+* **Analysis & Visualization Script:** [`Scatterplot.m`](./Scatterplot.m)
+* **Empirical Trial Dataset:** [`experiment_data.csv`](./experiment_data.csv)
+* **Additional Hull Views:** [`micro_asv2.png`](./micro_asv2.png)
+
+---
+
+## 2. BlueROV Subsea Platform & Custom Avionics Integration
+*Marine Robotics Laboratory | August 2026 – Present*
+
+Subsea Remotely Operated Vehicle (ROV) configured for high-reliability pressure vessel packaging, telemetry communication, and auxiliary payload integration.
+
+### CAD Chassis Packaging & Hardware Integration
+![BlueROV Integration](BluROV.png)
+
+* **Constrained CAD Packaging:** Designed a multi-tier custom electronics chassis in CAD to pack a Navigator flight stack, Arduino, high-current ESCs, battery packs, and subsea optics into a compact cylindrical pressure hull.
+* **Dense Avionics & Harnessing:** Integrated the complete internal electrical system, resolving packaging clashes, routing high-current motor buses, and establishing tethered surface-to-vehicle telemetry via high-speed Ethernet bridges.
+* **Hydrostatic Sealing & Leak Isolation:** Overcame water-ingress failures through repeated submersion and overnight static soak tests; systematically debugged cable penetrators, tuned O-ring compression tolerances, and eliminated seal failures to achieve a verified waterproof vehicle.
+* **Telemetry & Motor Calibration:** Calibrated motor response mappings and authored custom ROS 2 telemetry nodes to stream live PWM actuation data and monitor dynamic motor speed curves ahead of pool trials.
 
 ---
 
 ## 3. Autonomous Pick-and-Place Manipulation (UR5e Capstone)
-*Webots Robotics Simulation*
+*Robotics Simulation Capstone | 2025*
 
 Autonomous color-based sorting pipeline utilizing a 6-DOF UR5e robotic manipulator and wrist-mounted RGB camera in Webots.
 
-* <b>Simulation Demo:</b> <a href="capstone.MOV">▶ Click here to view the UR5e simulation video (capstone.MOV)</a>
-* **Vision-Based Grasping:** Implemented color segmentation and centroid detection via a wrist-mounted RGB camera stream to calculate 3D object coordinates and trigger real-time grasp routines.
-* **Kinematics & Trajectory Control:** Derived and implemented forward/inverse kinematics (FK/IK) and Jacobian-based path planning to execute smooth multi-axis pick-and-place trajectories.
-* **Closed-Loop Automation:** Evaluated task reliability and fault-recovery behavior across repeated automated sorting cycles.
-* **Project Artifacts:** [arm_ik.py](./arm_ik.py) | [color_sort_controller.py](./color_sort_controller.py) | [kinematic_helpers.py](./kinematic_helpers.py) | [color_sorting.wbt](./color_sorting.wbt)
-```[cite: 1, 2, 5, 6, 7, 20]
+### Closed-Loop Sorting & Manipulation Demo
+![UR5e Simulation Capstone](Capstone.gif)
+
+* **Computer Vision Pipeline:** Implemented color segmentation and centroid detection via a wrist-mounted camera stream to trigger real-time grasp poses.
+* **Kinematics & Trajectory Control:** Derived and implemented forward/inverse kinematics (FK/IK) and Jacobian-based trajectory planning to execute smooth pick-and-place paths.
+* **Closed-Loop Automation:** Integrated sensing, grasp validation, and trajectory execution loops to evaluate task success rates and system fault handling across repeated simulation trials.
+
+### Simulation Scripts & Controllers
+* **Inverse Kinematics Solver:** [`arm_ik.py`](./arm_ik.py)
+* **Kinematics Helper Functions:** [`kinematic_helpers.py`](./kinematic_helpers.py)
+* **Sorting Controllers:** [`color_sort_controller.py`](./color_sort_controller.py) | [`color_sort_controller.c`](./color_sort_controller.c)
+* **Webots Simulation World:** [`color_sorting.wbt`](./color_sorting.wbt)
+```[cite: 1, 2, 5, 6, 7, 13]
+
+---
+
+### How to apply this right now:
+1. Click on **`README.md`** in your repository file list[cite: 13].
+2. Click the **pencil icon** (Edit this file).
+3. Select all the existing text, hit delete, and paste this block into the file.
+4. Scroll down and click the green **Commit changes...** button[cite: 12].
